@@ -1,0 +1,22 @@
+[project]
+name = "coding-harness"
+version = "0.1.0"
+description = "Sync GitHub repositories to a structured local directory"
+authors = [
+    { name = "pannet1" }
+]
+requires-python = "==3.10.*"
+dependencies = []
+
+[project.scripts]
+sync = "src.main:sync"
+
+[tool.uv]
+managed = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
